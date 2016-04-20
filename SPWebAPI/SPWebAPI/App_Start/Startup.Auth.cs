@@ -11,7 +11,7 @@ using Owin;
 
 namespace SPWebAPI
 {
-    public class Startup
+    public partial class Startup
     {
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 
