@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name spwebApp.controller:MainCtrl
+ * @name spwebApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the spwebApp
  */
 angular.module('spwebApp')
-  .controller('MainCtrl', function () {
+  .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

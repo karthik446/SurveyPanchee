@@ -206,21 +206,15 @@ namespace SPService.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, JoinDate = DateTime.Today};
-            try
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+
+            IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
             {
-                IdentityResult result = await UserManager.CreateAsync(user, model.Password);
-                if (!result.Succeeded)
-                {
-                    return GetErrorResult(result);
-                }
+                return GetErrorResult(result);
             }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
-   
-            await GenerateEmailConformationMail(user, model.ConformationEmailUrl);
+           // await GenerateEmailConformationMail(user, model.ConformationEmailUrl);
             return Ok();
         }
 

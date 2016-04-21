@@ -48,9 +48,6 @@ namespace SPService.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Required]
-        public string ConformationEmailUrl { get; set; }
     }
 
     public class RegisterExternalBindingModel
