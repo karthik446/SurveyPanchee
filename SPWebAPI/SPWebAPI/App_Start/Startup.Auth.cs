@@ -1,13 +1,17 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
+using SPWebAPI.Models;
+using SPWebAPI.Providers;
+
 
 namespace SPWebAPI
 {
@@ -19,8 +23,9 @@ namespace SPWebAPI
         
         public void ConfigureAuth(IAppBuilder app)
         {
+
             // Configure the db context and user manager to use a single instance per request
-            app.CreatePerOwinContext(ApplicationDbContext.Create);
+           app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 
             // Enable the application to use a cookie to store information for the signed in user
@@ -38,8 +43,8 @@ namespace SPWebAPI
                 AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
                AllowInsecureHttp = true         // In production mode set AllowInsecureHttp = false
             };
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
-            app.UseCors(CorsOptions.AllowAll); // remove this in production
             // Enable the application to use bearer tokens to authenticate users
             app.UseOAuthBearerTokens(OAuthOptions); 
         }
