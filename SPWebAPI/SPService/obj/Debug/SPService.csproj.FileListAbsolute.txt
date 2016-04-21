@@ -85,3 +85,5 @@ C:\Git\SurveyPanchee\SPWebAPI\SPService\bin\System.Net.Http.Extensions.xml
 C:\Git\SurveyPanchee\SPWebAPI\SPService\bin\System.Net.Http.Primitives.xml
 C:\Git\SurveyPanchee\SPWebAPI\SPService\bin\System.Web.Http.Cors.xml
 C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Debug\SPService.csproj.App.config
+C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Debug\SPService.Migrations.SPM.resources
+C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Debug\SPService.csproj.GenerateResource.Cache

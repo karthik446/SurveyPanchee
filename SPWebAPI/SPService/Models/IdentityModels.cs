@@ -18,6 +18,15 @@ namespace SPService.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        [MaxLength(100)]
+        public string FirstName { get; set; }
+
+        [MaxLength(100)]
+        public string LastName { get; set; }
+
+        public DateTime JoinDate { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
