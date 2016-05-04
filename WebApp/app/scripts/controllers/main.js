@@ -9,5 +9,5 @@
  */
 angular.module('spwebApp')
   .controller('MainCtrl', function () {
-
+   $scope.test = "test";
   });

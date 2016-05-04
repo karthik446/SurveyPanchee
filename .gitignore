@@ -47,3 +47,6 @@ Temporary Items
 .apdisk
 SPWebAPI/SPWebAPI/obj/Debug/SPWebAPI.csproj.App.config
 *.config
+SPWebAPI/SPService/obj/Release/Package/FilePreviewParameter.xml
+*.pubxml
+SPWebAPI/SPService/Properties/PublishProfiles/ss.pubxml.user

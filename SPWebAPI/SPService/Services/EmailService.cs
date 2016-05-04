@@ -17,10 +17,12 @@ namespace SPService.Services
 
         private async Task ConfigSMTPasync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
+            try
+            {
+                // Plug in your email service here to send an email.
             var credentialUserName = ConfigurationManager.AppSettings["emailId"].ToString();
             var sentFrom = ConfigurationManager.AppSettings["emailId"].ToString();
-            var pwd = ConfigurationManager.AppSettings["Password"].ToString();
+            var pwd = ConfigurationManager.AppSettings["password"].ToString();
 
             // Configure the client:
             var mailClient = ConfigurationManager.AppSettings["SMTP"].ToString();
@@ -41,8 +43,7 @@ namespace SPService.Services
             mail.Subject = message.Subject;
             mail.Body = message.Body;
             mail.IsBodyHtml = true;
-            try
-            {
+           
                 await client.SendMailAsync(mail);
             }
             catch (Exception ex)

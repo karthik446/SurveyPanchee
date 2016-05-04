@@ -31,6 +31,16 @@ angular
         controller: 'UserRegisterCtrl',
         controllerAs: 'user/register'
       })
+      .when('/login', {
+        templateUrl: 'views/user/login.html',
+        controller: 'UserLoginCtrl',
+        controllerAs: 'user/login'
+      })
+      .when('/confirmEmail', {
+        templateUrl: 'views/user/confirmemail.html',
+        controller: 'UserConfirmemailCtrl',
+        controllerAs: 'user/confirmEmail'
+      })
       .otherwise({
         redirectTo: '/'
       });

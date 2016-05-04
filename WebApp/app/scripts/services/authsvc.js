@@ -9,7 +9,7 @@
  */
 angular.module('spwebApp')
   .service('authSvc', function ($http, $timeout, $q, $route, $location, userSvc) {
-    var BASE_URL = 'http://localhost:56112/';
+    var BASE_URL = 'http://aerontek.com/SPWebApi/';
 
     this.registerUser = function (regModel) {
       var RegisterBindingModel = {};
@@ -26,6 +26,23 @@ angular.module('spwebApp')
 
       return promise;
     }
+    
+   this.confirmEmail = function (userId, code) {
+            var confirmEmailViewModel = { 'UserId': userId, 'Code': code }
+            var promise = $http.post(BASE_URL + 'api/Account/ConfirmEmail', confirmEmailViewModel).then(
+                function success(response) {
 
+                },
+                function failure(response) {
+                    return $q.reject(response);
+                }
+            )
+            return promise;
+        }
+
+    this.logout = function () {
+      localStorage.removeItem('user');
+      $route.reload();
+    };
 
   });
