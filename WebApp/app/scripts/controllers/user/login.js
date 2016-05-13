@@ -8,10 +8,6 @@
  * Controller of the spwebApp
  */
 angular.module('spwebApp')
-  .controller('UserLoginCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('UserLoginCtrl', function ($scope, authSvc) {
+    
   });

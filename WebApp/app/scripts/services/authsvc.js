@@ -1,3 +1,4 @@
+/// <reference path="../../../typings/Angular/angular.d.ts" />
 'use strict';
 
 /**
@@ -7,9 +8,10 @@
  * # authSvc
  * Service in the spwebApp.
  */
+
 angular.module('spwebApp')
   .service('authSvc', function ($http, $timeout, $q, $route, $location, userSvc) {
-    var BASE_URL = 'http://aerontek.com/SPWebApi/';
+    var BASE_URL = 'http://aerontek.com/';
 
     this.registerUser = function (regModel) {
       var RegisterBindingModel = {};

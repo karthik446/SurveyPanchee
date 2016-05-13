@@ -4,8 +4,12 @@
     
   </p>
   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <form name="uploadFrm">
+     <p><input type="file" name="file" file-model="myFile"/> Upload a file </p>
+     <p><button type="button" ng-click="uploadFile()">Submit</button> </p>
+  </form>
 </div>
 
 <div class="row marketing">
-
+<file-upload></file-upload>
 </div>

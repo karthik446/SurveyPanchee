@@ -87,3 +87,5 @@ C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Release\SPService.Migrations.SPM.res
 C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Release\SPService.csproj.GenerateResource.Cache
 C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Release\SPService.dll
 C:\Git\SurveyPanchee\SPWebAPI\SPService\obj\Release\SPService.pdb
+C:\Git\SurveyPanchee\SPWebAPI\SPService\bin\Elmah.dll
+C:\Git\SurveyPanchee\SPWebAPI\SPService\bin\Elmah.Mvc.dll

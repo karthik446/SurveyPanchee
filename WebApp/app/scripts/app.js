@@ -1,5 +1,5 @@
 'use strict';
-
+/// <reference path="/jquery.d.ts" />
 /**
  * @ngdoc overview
  * @name spwebApp

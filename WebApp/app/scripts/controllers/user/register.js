@@ -30,6 +30,7 @@ angular.module('spwebApp')
                     $scope.successMessage = "Thank you for registering, please confirm your email and login using";
                 }, function errorCallback(response) {
                     $scope.modelState = response.data.ModelState;
+                    console.log(response);
                 })
             }
         }
