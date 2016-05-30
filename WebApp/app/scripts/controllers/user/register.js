@@ -14,7 +14,7 @@ angular.module('spwebApp')
             password: '',
             confirmPassword: ''
         }
-        $scope.successMessage = '';
+        $scope.successfulReg = false;
         $scope.modelState = undefined;
         
         $scope.registerUser = function () {
@@ -27,10 +27,9 @@ angular.module('spwebApp')
             });
             if (regUser.username != '' && regUser.password == regUser.confirmPassword) {
                 authSvc.registerUser(regUser).then(function successCallback(response) {
-                    $scope.successMessage = "Thank you for registering, please confirm your email and login using";
+                    $scope.successfulReg = true;
                 }, function errorCallback(response) {
                     $scope.modelState = response.data.ModelState;
-                    console.log(response);
                 })
             }
         }

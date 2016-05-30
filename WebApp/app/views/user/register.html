@@ -1,7 +1,7 @@
-<div class="alert alert-success col-sm-8" ng-show="successMessage.length">
-    {{successMessage}} <a href="/#/login">login</a>
+<div class="alert alert-success col-sm-8" ng-show="successfulReg">
+    Thank you for registering, please confirm your email and login using <a href="/#/login">login</a>
 </div>
-<!--<server-model-errors modelstate="modelState"></server-model-errors>-->
+<server-model-error modelstate="modelState"></server-model-error>
 <div ng-show="!successMessage.length" class="col-sm-12">
     <form class="form-horizontal" role="form" name="regForm" novalidate>
         <div class="form-group">

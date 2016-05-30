@@ -18,5 +18,12 @@ namespace SPService
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+
+        protected void Application_Error(Object sender, EventArgs e)
+        {
+            Exception ex = Server.GetLastError();
+            Elmah.ErrorLog.GetDefault(HttpContext.Current).Log(new Elmah.Error(ex));
+            Response.Redirect("unexpectederror.htm");
+        }
     }
 }

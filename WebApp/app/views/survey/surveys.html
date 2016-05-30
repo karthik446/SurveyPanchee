@@ -1,0 +1,20 @@
+
+<table class="table">
+    <thead>
+        Surveys
+    </thead>
+    <tr>
+        <th>
+           Survey  Name
+        </th>
+        <th>
+            Send Survey
+        </th>
+    </tr>
+    <tr ng-repeat="survey in Surveys track by $index">
+        <td> {{survey.SurveyName}} </td>
+        <td> <button type="button " class="btn btn-default " ng-click="removeQuestion($index) ">
+              <span class="glyphicon glyphicon-email "></span>
+           </button> </td>
+    </tr>
+</table>

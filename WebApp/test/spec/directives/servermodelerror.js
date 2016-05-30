@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: fileUpload', function () {
+describe('Directive: serverModelError', function () {
 
   // load the directive's module
   beforeEach(module('spwebApp'));
@@ -13,8 +13,8 @@ describe('Directive: fileUpload', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<file-upload></file-upload>');
+    element = angular.element('<server-model-error></server-model-error>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the fileUpload directive');
+    expect(element.text()).toBe('this is the serverModelError directive');
   }));
 });

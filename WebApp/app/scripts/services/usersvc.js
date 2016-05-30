@@ -9,10 +9,14 @@
  */
 angular.module('spwebApp')
   .service('userSvc', function () {
-         var vm = this;
-          vm.user = {
-            loggedIn: localStorage.getItem('user') ? true : false,
-            name: localStorage.getItem('user'),
-            accessToken: localStorage.getItem('token')
-        };
+    var vm = this;
+    
+    
+    this.getUser = function () {
+      return vm.user = {
+      loggedIn: localStorage.getItem('user') ? true : false,
+      name: localStorage.getItem('user'),
+      accessToken: localStorage.getItem('token')
+    };
+    }
   });

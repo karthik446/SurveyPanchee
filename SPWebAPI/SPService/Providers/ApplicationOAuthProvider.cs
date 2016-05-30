@@ -39,6 +39,12 @@ namespace SPService.Providers
                 return;
             }
 
+            if (!user.EmailConfirmed)
+            {
+                context.SetError("unconfirmed_email", "Please confirm your email");
+                return;
+            }
+
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager,
                OAuthDefaults.AuthenticationType);
             ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
